@@ -105,7 +105,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://baiibbai.github.io/2020/05/27/Java-%E9%A1%9E%E5%88%A5/" data-id="ckap542ul0000jsgz00qke1vd" class="article-share-link">Share</a>
+      <a data-url="https://baiibbai.github.io/2020/05/27/Java-%E9%A1%9E%E5%88%A5/" data-id="ckap56ggp000014gz2viabns3" class="article-share-link">Share</a>
       
       
     </footer>
@@ -143,31 +143,15 @@
 <p>  <code>implementation &#39;com.google.android.material:material:1.1.0&#39;</code></p>
 </li>
 </ul>
-<h2 id="TextInputLayout的View設定方法"><a href="#TextInputLayout的View設定方法" class="headerlink" title="TextInputLayout的View設定方法"></a>TextInputLayout的View設定方法</h2><p>將EditText包圍起來</p>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">com.google.android.material.textfield.TextInputLayout</span></span></span><br><span class="line"><span class="tag">		<span class="attr">android:id</span>=<span class="string">"@+id/login_tilayout_account"</span></span></span><br><span class="line"><span class="tag">		<span class="attr">android:layout_width</span>=<span class="string">"200dp"</span></span></span><br><span class="line"><span class="tag">		<span class="attr">android:layout_height</span>=<span class="string">"wrap_content"</span></span></span><br><span class="line"><span class="tag">		<span class="attr">app:counterEnabled</span>=<span class="string">"true"</span></span></span><br><span class="line"><span class="tag">		<span class="attr">app:counterMaxLength</span>=<span class="string">"20"</span></span></span><br><span class="line"><span class="tag">		<span class="attr">android:theme</span>=<span class="string">"@style/account_text_style"</span></span></span><br><span class="line"><span class="tag">		<span class="attr">app:hintTextAppearance</span>=<span class="string">"@style/account_hint_style"</span></span></span><br><span class="line"><span class="tag">	&gt;</span></span><br><span class="line">		<span class="tag">&lt;<span class="name">EditText</span></span></span><br><span class="line"><span class="tag">			<span class="attr">android:id</span>=<span class="string">"@+id/login_edt_account"</span></span></span><br><span class="line"><span class="tag">			<span class="attr">android:hint</span>=<span class="string">"帳號"</span></span></span><br><span class="line"><span class="tag">			<span class="attr">android:textSize</span>=<span class="string">"15sp"</span></span></span><br><span class="line"><span class="tag">			<span class="attr">android:textColor</span>=<span class="string">"#000000"</span></span></span><br><span class="line"><span class="tag">			<span class="attr">android:layout_width</span>=<span class="string">"match_parent"</span></span></span><br><span class="line"><span class="tag">			<span class="attr">android:layout_height</span>=<span class="string">"wrap_content"</span></span></span><br><span class="line"><span class="tag">		/&gt;</span></span><br><span class="line">	<span class="tag">&lt;/<span class="name">com.google.android.material.textfield.TextInputLayout</span>&gt;</span></span><br></pre></td></tr></table></figure>
-
-<h2 id="輸入長度限制"><a href="#輸入長度限制" class="headerlink" title="輸入長度限制"></a>輸入長度限制</h2><p>可以使EditText輸入時，下方有數字統計，提醒剩餘可輸入的數字量</p>
-<p><img src="https://i.imgur.com/nkDLzJq.png" alt="counterMaxLenght"></p>
-<h2 id="android-hint屬性"><a href="#android-hint屬性" class="headerlink" title="android:hint屬性"></a>android:hint屬性</h2><p>點選EditText後，將會變成標題</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">android:hint&#x3D;&quot;帳號&quot;</span><br></pre></td></tr></table></figure>
-
-<p><img src="https://i.imgur.com/TN8D7MQ.png" alt="hint圖示"></p>
-<h2 id="錯誤訊息提醒"><a href="#錯誤訊息提醒" class="headerlink" title="錯誤訊息提醒"></a>錯誤訊息提醒</h2><p>在程式碼裡設定TextInputLayout</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">mPasswordLayout.setErrorEnabled(<span class="keyword">true</span>);</span><br><span class="line">mAccountLayout.setErrorEnabled(<span class="keyword">true</span>);</span><br></pre></td></tr></table></figure>
-
-
-<p>在按下按鈕後，判斷資料正確與否，顯示錯誤訊息</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line">mSignUpBtn.setOnClickListener(<span class="keyword">new</span> View.OnClickListener()</span><br><span class="line">&#123;</span><br><span class="line">	<span class="meta">@Override</span></span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">onClick</span><span class="params">(View view)</span></span></span><br><span class="line"><span class="function">	</span>&#123;</span><br><span class="line">		String account = mAccountEdit.getText().toString();</span><br><span class="line">		String password = mPasswordEdit.getText().toString();</span><br><span class="line">		<span class="keyword">if</span>( TextUtils.isEmpty(account) )&#123;</span><br><span class="line">			mAccountLayout.setError(<span class="string">"請輸入帳號"</span>);</span><br><span class="line">			mPasswordLayout.setError(<span class="string">""</span>);</span><br><span class="line">			<span class="keyword">return</span>;</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">if</span>( TextUtils.isEmpty(password) )&#123;</span><br><span class="line">			mPasswordLayout.setError(<span class="string">"請輸入密碼"</span>);</span><br><span class="line">			mAccountLayout.setError(<span class="string">""</span>);</span><br><span class="line">		&#125;</span><br><span class="line">		mAccountLayout.setError(<span class="string">""</span>);</span><br><span class="line">		mPasswordLayout.setError(<span class="string">""</span>);</span><br><span class="line">        </span><br><span class="line">        ...</span><br><span class="line">     &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h2 id="外觀設定"><a href="#外觀設定" class="headerlink" title="外觀設定"></a>外觀設定</h2><p>先另外設定好style<br>改變editText的顏色</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">&lt;!--改變editText的顏色--&gt;</span><br><span class="line">&lt;style name&#x3D;&quot;account_text_style&quot; parent&#x3D;&quot;Theme.Design.Light.NoActionBar&quot;&gt;</span><br><span class="line">	&lt;item name&#x3D;&quot;colorAccent&quot;&gt;#0000ff&lt;&#x2F;item&gt;</span><br><span class="line">&lt;&#x2F;style&gt;</span><br><span class="line"></span><br><span class="line">&lt;!--改變editText的hint顏色--&gt;</span><br><span class="line">&lt;style name&#x3D;&quot;account_hint_style&quot; parent&#x3D;&quot;Theme.Design.Light.NoActionBar&quot;&gt;</span><br><span class="line">	&lt;item name&#x3D;&quot;android:textStyle&quot;&gt;bold&lt;&#x2F;item&gt;</span><br><span class="line">	&lt;item name&#x3D;&quot;android:textColor&quot;&gt;#f25f00&lt;&#x2F;item&gt;</span><br><span class="line">	&lt;item name&#x3D;&quot;android:textSize&quot;&gt;20sp&lt;&#x2F;item&gt;</span><br><span class="line">&lt;&#x2F;style&gt;</span><br></pre></td></tr></table></figure>
-
-<p>套到TextInputLayout</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">&lt;com.google.android.material.textfield.TextInputLayout</span><br><span class="line">	android:id&#x3D;&quot;@+id&#x2F;login_tilayout_account&quot;</span><br><span class="line">	android:layout_width&#x3D;&quot;200dp&quot;</span><br><span class="line">	android:layout_height&#x3D;&quot;wrap_content&quot;</span><br><span class="line">	app:counterEnabled&#x3D;&quot;true&quot;</span><br><span class="line">	app:counterMaxLength&#x3D;&quot;20&quot;</span><br><span class="line">        &lt;!--改變editText的顏色--&gt;</span><br><span class="line">	android:theme&#x3D;&quot;@style&#x2F;account_text_style&quot;</span><br><span class="line">        &lt;!--改變editText的hint顏色--&gt;</span><br><span class="line">	app:hintTextAppearance&#x3D;&quot;@style&#x2F;account_hint_style&quot;</span><br><span class="line">&gt;</span><br></pre></td></tr></table></figure>
+        
+          <p class="article-more-link">
+            <a href="/2020/05/27/TextInputLayout/#more">Read More</a>
+          </p>
+        
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://baiibbai.github.io/2020/05/27/TextInputLayout/" data-id="ckap542up0001jsgz9pyl0g32" class="article-share-link">Share</a>
+      <a data-url="https://baiibbai.github.io/2020/05/27/TextInputLayout/" data-id="ckap56gh0000514gz67n4f7tj" class="article-share-link">Share</a>
       
       
     </footer>
@@ -216,7 +200,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://baiibbai.github.io/2020/05/27/Java%E7%AD%86%E8%A8%98/" data-id="ckap542uw0003jsgze90i2yj8" class="article-share-link">Share</a>
+      <a data-url="https://baiibbai.github.io/2020/05/27/Java%E7%AD%86%E8%A8%98/" data-id="ckap56ggv000114gzdqhf6ijt" class="article-share-link">Share</a>
       
       
     </footer>
@@ -262,7 +246,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://baiibbai.github.io/2020/05/27/NetLinking%E6%9E%B6%E8%A8%AD%E7%B6%B2%E7%AB%99/" data-id="ckap542uq0002jsgz11d1fvif" class="article-share-link">Share</a>
+      <a data-url="https://baiibbai.github.io/2020/05/27/NetLinking%E6%9E%B6%E8%A8%AD%E7%B6%B2%E7%AB%99/" data-id="ckap56ggy000314gzc63m1v0j" class="article-share-link">Share</a>
       
       
     </footer>
@@ -304,7 +288,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://baiibbai.github.io/2020/05/27/hello-world/" data-id="ckap542uz0005jsgz19b80yo5" class="article-share-link">Share</a>
+      <a data-url="https://baiibbai.github.io/2020/05/27/hello-world/" data-id="ckap56ggz000414gz2qn0ebuj" class="article-share-link">Share</a>
       
       
     </footer>
@@ -358,7 +342,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://baiibbai.github.io/2020/05/27/MVVM%E6%9E%B6%E6%A7%8B%E7%AF%84%E4%BE%8B/" data-id="ckap542ux0004jsgz38u1bjya" class="article-share-link">Share</a>
+      <a data-url="https://baiibbai.github.io/2020/05/27/MVVM%E6%9E%B6%E6%A7%8B%E7%AF%84%E4%BE%8B/" data-id="ckap56ggx000214gz8gj5cfzi" class="article-share-link">Share</a>
       
       
     </footer>
