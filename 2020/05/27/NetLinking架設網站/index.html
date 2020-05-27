@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+
+  
+  <title>NetLinking架設網站 | Baiibbai的部落格</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="文件下載 Clone NetLinking網站資料夾 XSG.ME.NetLink  執行環境設定 Visual Studio 2019安裝設定">
+<meta property="og:type" content="article">
+<meta property="og:title" content="NetLinking架設網站">
+<meta property="og:url" content="https://baiibbai.github.io/2020/05/27/NetLinking%E6%9E%B6%E8%A8%AD%E7%B6%B2%E7%AB%99/index.html">
+<meta property="og:site_name" content="Baiibbai的部落格">
+<meta property="og:description" content="文件下載 Clone NetLinking網站資料夾 XSG.ME.NetLink  執行環境設定 Visual Studio 2019安裝設定">
+<meta property="og:locale" content="zh_TW">
+<meta property="og:image" content="https://www.webpagescreenshot.info/image-url/qxnTf1onw">
+<meta property="og:image" content="https://storage.googleapis.com/openscreenshot/Y%2Fb%2FG/ENvkyiGbY.png">
+<meta property="og:image" content="https://storage.googleapis.com/openscreenshot/h%2Fs%2FX/IzNT6XXsh.png">
+<meta property="og:image" content="https://storage.googleapis.com/openscreenshot/z%2FP%2FB/sHM71zBPz.png">
+<meta property="og:image" content="https://storage.googleapis.com/openscreenshot/1%2F7%2Fa/6aawI9a71.png">
+<meta property="og:image" content="https://storage.googleapis.com/openscreenshot/h%2F5%2Fb/253w3yb5h.png">
+<meta property="og:image" content="https://storage.googleapis.com/openscreenshot/g%2FD%2Fo/QFKY0EoDg.png">
+<meta property="og:image" content="https://storage.googleapis.com/openscreenshot/Q%2Fy%2FE/F1GTVzEyQ.png">
+<meta property="og:image" content="https://storage.googleapis.com/openscreenshot/H%2FN%2FI/lESeXLINH.png">
+<meta property="og:image" content="https://storage.googleapis.com/openscreenshot/M%2F7%2FD/ydCNeAD7M.png">
+<meta property="og:image" content="https://storage.googleapis.com/openscreenshot/h%2FI%2Fc/mGKPyMcIh.png">
+<meta property="og:image" content="https://storage.googleapis.com/openscreenshot/E%2FB%2Ft/CGx_GwtBE.png">
+<meta property="og:image" content="https://storage.googleapis.com/openscreenshot/J%2Fp%2Fi/xIA2XZipJ.png">
+<meta property="og:image" content="https://storage.googleapis.com/openscreenshot/4%2F-%2Fy/WLaV7Cy-4.png">
+<meta property="og:image" content="https://storage.googleapis.com/openscreenshot/u%2Fk%2Fo/u409sGoku.png">
+<meta property="og:image" content="https://storage.googleapis.com/openscreenshot/k%2Fj%2Fd/XuDlKvdjk.png">
+<meta property="og:image" content="https://storage.googleapis.com/openscreenshot/k%2Fs%2FD/T2d0oiDsk.png">
+<meta property="og:image" content="https://storage.googleapis.com/openscreenshot/f%2Fy%2Fg/QrPwi2gyf.png">
+<meta property="og:image" content="https://storage.googleapis.com/openscreenshot/b%2Fd%2Fq/qyxrNgqdb.png">
+<meta property="og:image" content="https://storage.googleapis.com/openscreenshot/N%2FV%2F6/YXIklO6VN.png">
+<meta property="og:image" content="https://storage.googleapis.com/openscreenshot/i%2Fk%2FH/kJbrl_Hki.png">
+<meta property="og:image" content="https://storage.googleapis.com/openscreenshot/Z%2Fu%2FO/opZfQrOuZ.png">
+<meta property="og:image" content="https://storage.googleapis.com/openscreenshot/t%2Fq%2F-/jmHWTM-qt.png">
+<meta property="article:published_time" content="2020-05-27T08:29:16.000Z">
+<meta property="article:modified_time" content="2020-05-27T08:30:54.145Z">
+<meta property="article:author" content="John Doe">
+<meta property="article:tag" content="Android">
+<meta property="article:tag" content="MVVM">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://www.webpagescreenshot.info/image-url/qxnTf1onw">
+  
+    <link rel="alternate" href="/atom.xml" title="Baiibbai的部落格" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  
+<link rel="stylesheet" href="/css/style.css">
+
+<meta name="generator" content="Hexo 4.2.1"></head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Baiibbai的部落格</a>
+      </h1>
+      
+        <h2 id="subtitle-wrap">
+          <a href="/" id="subtitle">MVVM架構範例</a>
+        </h2>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="搜尋"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="https://baiibbai.github.io"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-NetLinking架設網站" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2020/05/27/NetLinking%E6%9E%B6%E8%A8%AD%E7%B6%B2%E7%AB%99/" class="article-date">
+  <time datetime="2020-05-27T08:29:16.000Z" itemprop="datePublished">2020-05-27</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      NetLinking架設網站
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="文件下載"><a href="#文件下載" class="headerlink" title="文件下載"></a>文件下載</h2><ul>
+<li>Clone NetLinking網站資料夾 <a href="https://www.git.xsg/ME/XSG.ME.NetLink" target="_blank" rel="noopener">XSG.ME.NetLink</a></li>
+</ul>
+<h2 id="執行環境設定"><a href="#執行環境設定" class="headerlink" title="執行環境設定"></a>執行環境設定</h2><ul>
+<li>Visual Studio 2019安裝設定</li>
+</ul>
+<a id="more"></a>
+
+<ul>
+<li><p>下載 <a href="https://visualstudio.microsoft.com/zh-hant/downloads/" target="_blank" rel="noopener">Visual Studio 2019</a></p>
+</li>
+<li><p>社群版</p>
+<p>  <img src="https://www.webpagescreenshot.info/image-url/qxnTf1onw" alt="社群版"></p>
+</li>
+<li><p>下載工作負載</p>
+<p>  <img src="https://storage.googleapis.com/openscreenshot/Y%2Fb%2FG/ENvkyiGbY.png" alt="下載工作負載1"></p>
+<p>  <img src="https://storage.googleapis.com/openscreenshot/h%2Fs%2FX/IzNT6XXsh.png" alt="下載工作負載2"></p>
+<p>  <img src="https://storage.googleapis.com/openscreenshot/z%2FP%2FB/sHM71zBPz.png" alt="下載工作負載3"></p>
+</li>
+<li><p>下載個別元件</p>
+<p>  <img src="https://storage.googleapis.com/openscreenshot/1%2F7%2Fa/6aawI9a71.png" alt="下載個別元件"></p>
+<p>  <img src="https://storage.googleapis.com/openscreenshot/h%2F5%2Fb/253w3yb5h.png" alt="下載個別元件2"></p>
+</li>
+</ul>
+<h2 id="IIS權限設定"><a href="#IIS權限設定" class="headerlink" title="IIS權限設定"></a>IIS權限設定</h2><ul>
+<li><p>控制台(設定)-&gt;應用程式</p>
+<p>  <img src="https://storage.googleapis.com/openscreenshot/g%2FD%2Fo/QFKY0EoDg.png" alt="控制台設定"></p>
+</li>
+<li><p>應用程式-&gt;程式和功能</p>
+<p>  <img src="https://storage.googleapis.com/openscreenshot/Q%2Fy%2FE/F1GTVzEyQ.png" alt="應用程式"></p>
+</li>
+<li><p>程式和功能-&gt;開啟或關閉Windows功能</p>
+<p>  <img src="https://storage.googleapis.com/openscreenshot/H%2FN%2FI/lESeXLINH.png" alt="程式和功能"></p>
+</li>
+<li><p>開啟或關閉Windows功能</p>
+<p>  <img src="https://storage.googleapis.com/openscreenshot/M%2F7%2FD/ydCNeAD7M.png" alt="開啟或關閉Windows功能"><br>  <img src="https://storage.googleapis.com/openscreenshot/h%2FI%2Fc/mGKPyMcIh.png" alt="開啟或關閉Windows功能2"><br>  <img src="https://storage.googleapis.com/openscreenshot/E%2FB%2Ft/CGx_GwtBE.png" alt="開啟或關閉Windows功能3"></p>
+</li>
+<li><p>如未勾選完全，執行會發生錯誤</p>
+<blockquote>
+<p>黑方框 : 部分勾選<br>打勾 : 全部內容勾選</p>
+</blockquote>
+<p>  <img src="https://storage.googleapis.com/openscreenshot/J%2Fp%2Fi/xIA2XZipJ.png" alt="錯誤1">  </p>
+</li>
+</ul>
+<h2 id="MONGODB"><a href="#MONGODB" class="headerlink" title="MONGODB"></a>MONGODB</h2><blockquote>
+<p>下載 <a href="https://www.mongodb.com/download-center/community" target="_blank" rel="noopener">MongoDB</a></p>
+</blockquote>
+<h2 id="建立執行檔"><a href="#建立執行檔" class="headerlink" title="建立執行檔"></a>建立執行檔</h2><ul>
+<li><p>開啟clone下來的資料夾</p>
+</li>
+<li><p>XSG.ME.Netlink.sln</p>
+<p>  <img src="https://storage.googleapis.com/openscreenshot/4%2F-%2Fy/WLaV7Cy-4.png" alt="XSG.ME.Netlink.sln"></p>
+</li>
+<li><p>建置</p>
+<blockquote>
+<p>建置方案<br>發佈XSG.ME.NetLink</p>
+</blockquote>
+<p>  <img src="https://storage.googleapis.com/openscreenshot/u%2Fk%2Fo/u409sGoku.png" alt="bulid"></p>
+</li>
+<li><p>建立發佈檔 -&gt; 新增</p>
+<p>  <img src="https://storage.googleapis.com/openscreenshot/k%2Fj%2Fd/XuDlKvdjk.png" alt="new"></p>
+</li>
+<li><p>選擇資料夾</p>
+<p>  <img src="https://storage.googleapis.com/openscreenshot/k%2Fs%2FD/T2d0oiDsk.png" alt="file"></p>
+</li>
+<li><p>將檔案放在D槽，自行新增的資料夾</p>
+<p>  <img src="https://storage.googleapis.com/openscreenshot/f%2Fy%2Fg/QrPwi2gyf.png" alt="local"></p>
+</li>
+<li><p>必須將資料夾放在D槽，否則會出現錯誤</p>
+<p>  <img src="https://storage.googleapis.com/openscreenshot/b%2Fd%2Fq/qyxrNgqdb.png" alt="error2"></p>
+</li>
+</ul>
+<h2 id="IIS基本設定"><a href="#IIS基本設定" class="headerlink" title="IIS基本設定"></a>IIS基本設定</h2><ul>
+<li><p>開啟IIS管理員 -&gt;點擊站台 -&gt;開啟基本設定</p>
+<p>  <img src="https://storage.googleapis.com/openscreenshot/N%2FV%2F6/YXIklO6VN.png" alt="iis1"></p>
+</li>
+<li><p>實體路徑選擇剛剛建立好的發佈檔</p>
+<p>  <img src="https://storage.googleapis.com/openscreenshot/i%2Fk%2FH/kJbrl_Hki.png" alt="iis2"></p>
+</li>
+<li><p>啟動或重新啟動 : 同步建立檔</p>
+<p>  <img src="https://storage.googleapis.com/openscreenshot/Z%2Fu%2FO/opZfQrOuZ.png" alt="iis3"></p>
+</li>
+<li><p>即可啟動 開啟網頁測試</p>
+</li>
+<li><p>Ex. http://(本機位置)/api/GETEvents</p>
+<p>  <img src="https://storage.googleapis.com/openscreenshot/t%2Fq%2F-/jmHWTM-qt.png" alt="test"><br>  出現此頁面表示發佈成功，即可開始使用網站</p>
+</li>
+</ul>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://baiibbai.github.io/2020/05/27/NetLinking%E6%9E%B6%E8%A8%AD%E7%B6%B2%E7%AB%99/" data-id="ckap3f1wv0003l8gz05793p9j" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2020/05/27/Java%E7%AD%86%E8%A8%98/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          Java筆記
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2020/05/27/hello-world/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">Hello World</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+
+  
+    
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">彙整</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/05/">五月 2020</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">最新文章</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2020/05/27/Java%E7%AD%86%E8%A8%98/">Java筆記</a>
+          </li>
+        
+          <li>
+            <a href="/2020/05/27/NetLinking%E6%9E%B6%E8%A8%AD%E7%B6%B2%E7%AB%99/">NetLinking架設網站</a>
+          </li>
+        
+          <li>
+            <a href="/2020/05/27/hello-world/">Hello World</a>
+          </li>
+        
+          <li>
+            <a href="/2020/05/27/MVVM%E6%9E%B6%E6%A7%8B%E7%AF%84%E4%BE%8B/">MVVM架構範例</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2020 John Doe<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+
+  
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+
+
+<script src="/js/script.js"></script>
+
+
+
+
+  </div>
+</body>
+</html>

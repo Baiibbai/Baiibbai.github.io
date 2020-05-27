@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+
+  
+  <title>Java筆記 | Baiibbai的部落格</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="基本型態(Primitive type) 數值型 整數 : byte、short、int、long 浮點 : float、double   字元 : char 布林 : boolean">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Java筆記">
+<meta property="og:url" content="https://baiibbai.github.io/2020/05/27/Java%E7%AD%86%E8%A8%98/index.html">
+<meta property="og:site_name" content="Baiibbai的部落格">
+<meta property="og:description" content="基本型態(Primitive type) 數值型 整數 : byte、short、int、long 浮點 : float、double   字元 : char 布林 : boolean">
+<meta property="og:locale" content="zh_TW">
+<meta property="article:published_time" content="2020-05-27T08:33:27.000Z">
+<meta property="article:modified_time" content="2020-05-27T08:34:13.439Z">
+<meta property="article:author" content="John Doe">
+<meta property="article:tag" content="Android">
+<meta property="article:tag" content="MVVM">
+<meta name="twitter:card" content="summary">
+  
+    <link rel="alternate" href="/atom.xml" title="Baiibbai的部落格" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  
+<link rel="stylesheet" href="/css/style.css">
+
+<meta name="generator" content="Hexo 4.2.1"></head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Baiibbai的部落格</a>
+      </h1>
+      
+        <h2 id="subtitle-wrap">
+          <a href="/" id="subtitle">MVVM架構範例</a>
+        </h2>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="搜尋"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="https://baiibbai.github.io"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-Java筆記" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2020/05/27/Java%E7%AD%86%E8%A8%98/" class="article-date">
+  <time datetime="2020-05-27T08:33:27.000Z" itemprop="datePublished">2020-05-27</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      Java筆記
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="基本型態-Primitive-type"><a href="#基本型態-Primitive-type" class="headerlink" title="基本型態(Primitive type)"></a>基本型態(Primitive type)</h1><ul>
+<li>數值型<ul>
+<li>整數 : byte、short、int、long</li>
+<li>浮點 : float、double</li>
+</ul>
+</li>
+<li>字元 : char</li>
+<li>布林 : boolean</li>
+</ul>
+<a id="more"></a>
+
+<h1 id="類別型態-Class-type"><a href="#類別型態-Class-type" class="headerlink" title="類別型態(Class type)"></a>類別型態(Class type)</h1><ul>
+<li>類別 : Class</li>
+<li>介面 : interface</li>
+<li>抽象類別 : abstract</li>
+<li>列舉 : enum</li>
+</ul>
+<h1 id="建構子"><a href="#建構子" class="headerlink" title="建構子"></a>建構子</h1><p>用來設定初值，且載入記憶體使用完就會釋放</p>
+<ul>
+<li>宣告屬性變數(成員變數、欄位)的初值</li>
+<li>宣告時，名稱必須與類別名稱相同</li>
+<li>建構子方法前不可宣告任何傳回值型別</li>
+<li>使用new才會被呼叫</li>
+<li>預設建構子 : 每個類別至少有一個建構子。若沒有宣告建構子，JAVA會提供一個預設建構子(無參數、無實作)</li>
+</ul>
+<p>this()用於呼叫類別物件中同名的另一個建構子方法<br>this()必須寫在建構子方法的第一行</p>
+<ul>
+<li>類別 : 事物的一個抽象，具有共同特徵的一類事物的一個抽象</li>
+<li>物件 : 類具體的某一實例</li>
+<li>所以實例(instance)或物件(object) -&gt; 物件實例</li>
+<li>instance of 判斷記憶體位置是哪一子類別</li>
+</ul>
+<h1 id="物件導向特性"><a href="#物件導向特性" class="headerlink" title="物件導向特性"></a>物件導向特性</h1><h2 id="封裝-Encapsulation"><a href="#封裝-Encapsulation" class="headerlink" title="封裝(Encapsulation)"></a>封裝(Encapsulation)</h2><ul>
+<li>目的 : 保護重要的屬性變數或副程式(讓外部程式不可以隨意存取)</li>
+<li>方法 : 將變數或副程式宣告為private(私有)</li>
+<li>開發 : 有限度的開放被保護的屬性變數或副程式<ul>
+<li>getter 取值  setter設值</li>
+<li>必須檢查值的合法性(有效性)和安全性</li>
+</ul>
+</li>
+</ul>
+<h2 id="繼承-Inheritance"><a href="#繼承-Inheritance" class="headerlink" title="繼承(Inheritance)"></a>繼承(Inheritance)</h2><ul>
+<li>目的 : 不開發重複功能程式碼</li>
+<li>方法 : 使用extends<ul>
+<li>子類別(subclass) extends 父類別(superclass)</li>
+</ul>
+</li>
+<li>開發 : 子類別在使用時，會呼叫父類別的建構子<ul>
+<li>如果未特別告知，則會去呼叫父類別的預設建構子</li>
+<li>如有super，則看super撰寫方法</li>
+</ul>
+</li>
+</ul>
+<h3 id="呼叫自己類別方法-this"><a href="#呼叫自己類別方法-this" class="headerlink" title="呼叫自己類別方法 : this()"></a>呼叫自己類別方法 : this()</h3><ul>
+<li>只能寫在建構子的第一行</li>
+<li>呼叫自己的屬性變數 : this.屬性</li>
+<li>呼叫自己的屬性方法 : this.方法()</li>
+</ul>
+<h3 id="呼叫父類別的建構子-super"><a href="#呼叫父類別的建構子-super" class="headerlink" title="呼叫父類別的建構子 : super()"></a>呼叫父類別的建構子 : super()</h3><ul>
+<li>只能寫在建構子的第一行，如果子類別想要同時呼叫自己與父親的建構子，必須先呼叫自己的建構子，再由自己的其他建構子去呼叫父類別的建構子</li>
+<li>super.屬性 &amp; super.方法()</li>
+</ul>
+<h2 id="覆寫-Override"><a href="#覆寫-Override" class="headerlink" title="覆寫(Override)"></a>覆寫(Override)</h2><ul>
+<li>外部程式無法存取父類別中的method</li>
+<li>Class包含「成員變數(Filed)」、「建構子(constructor)」、「方法(method)」</li>
+<li>Filed &amp; Method可以使用存取修飾子，但建構子不行</li>
+<li>Method 可以擁有同名但參數有所不同的「多載(Overload)」</li>
+<li>建構子內可使用this()-&gt;子類別 super()-&gt;父類別</li>
+</ul>
+<h3 id="overload"><a href="#overload" class="headerlink" title="overload"></a>overload</h3><ul>
+<li>有無繼承都會發生</li>
+<li>有個同名副程式，但參數列中的參數數量、型別、型別順序必須不同</li>
+</ul>
+<h3 id="override"><a href="#override" class="headerlink" title="override"></a>override</h3><ul>
+<li>繼承才會發生</li>
+<li>父子類別中的方法宣告必須一致</li>
+</ul>
+<h1 id="抽象類別-abstract-class"><a href="#抽象類別-abstract-class" class="headerlink" title="抽象類別(abstract class)"></a>抽象類別(abstract class)</h1><p>未定義完全的類別，所以不能被用來生成物件，只能被擴充，擴充後完成未完成的抽象方法定義</p>
+<ul>
+<li>若類別中有一個方法未實作任何程式碼，則該方法必須宣告為抽象方法，此類別必須為抽象類別</li>
+<li>父類別為抽象類別，其所產生的抽象方法必須由子類別來實作</li>
+<li>如果子類別沒有全部實作出父類別提供的所有抽象方法，子類別也須宣告為抽象</li>
+<li>抽象方法的存取修飾子不可以是static,final,private</li>
+<li>方法不可以有程式碼{}</li>
+<li>類別不可以有new</li>
+<li>類別不一定要有方法，目的強迫繼承</li>
+</ul>
+<h2 id="abstract"><a href="#abstract" class="headerlink" title="abstract"></a>abstract</h2><ul>
+<li>不可寫在變數</li>
+<li>使用在方法上時，方法不能實作程式碼</li>
+</ul>
+<h2 id="final"><a href="#final" class="headerlink" title="final"></a>final</h2><ul>
+<li>如果寫在變數上時 -&gt; 常數，數值不可改變</li>
+<li>如果寫在方法上時 -&gt; 不可被覆寫(override)</li>
+<li>如果寫在類別上時 -&gt; 不可被extends</li>
+</ul>
+<h1 id="抽象方法-abstract-method"><a href="#抽象方法-abstract-method" class="headerlink" title="抽象方法(abstract method)"></a>抽象方法(abstract method)</h1><p>規範操作方法，並在執行時期可操作各種子類別的物件實例</p>
+<h1 id="介面-interface"><a href="#介面-interface" class="headerlink" title="介面(interface)"></a>介面(interface)</h1><p>規範公開的操作介面，一個實作介面的某類別，必須實作介面中所有已規範的操作方法，一個類別可以實作多個介面，實現多重繼承，表示一個類別可以身兼多個角色與職責</p>
+<p>特性</p>
+<ul>
+<li>介面宣告的方法，沒有實作內容</li>
+<li>介面方法由類別來實作</li>
+<li>多個無關類別可以實作同一介面</li>
+<li>一個類別可以實作多介面</li>
+<li>介面定義一個JAVA型別</li>
+</ul>
+<h1 id="存取修飾子-final"><a href="#存取修飾子-final" class="headerlink" title="存取修飾子 final"></a>存取修飾子 final</h1><ul>
+<li>不能被繼承</li>
+<li>不能被覆蓋</li>
+<li>不能被修改值</li>
+</ul>
+<h1 id="物件-object"><a href="#物件-object" class="headerlink" title="物件 object"></a>物件 object</h1><p>是所有類別的根</p>
+<ul>
+<li>toString 回傳物件本身描述</li>
+<li>finalize 回收沒被使用的object</li>
+</ul>
+<h1 id="多型-polymorphism"><a href="#多型-polymorphism" class="headerlink" title="多型(polymorphism)"></a>多型(polymorphism)</h1><p>使用父類別宣告一個參考名稱，並讓其參考至子類別的物件實例，並以父類別上的公開介面來操作子類別上對應的公開方法</p>
+<ul>
+<li><p>目的 : 使用同一變數可操作多種空間</p>
+</li>
+<li><p>注意</p>
+<ul>
+<li>要有繼承關係</li>
+<li>要有覆寫(override)</li>
+<li>父類別參考變數指向 子類別物件實例</li>
+</ul>
+</li>
+<li><p>一個物件實例只有一個型別。變數是多型的，因為它們可指向有繼承關係的父子型別的物件實例</p>
+</li>
+<li><p>有繼承關係的架構下，單一的物件參考變數可被宣告為多型</p>
+</li>
+<li><p>複寫機制讀的變化</p>
+</li>
+<li><p>non-static方法</p>
+<ul>
+<li>沒覆寫 : 執行父類別</li>
+<li>有覆寫 : 執行子類別已覆蓋方法</li>
+</ul>
+</li>
+<li><p>static</p>
+<ul>
+<li>使用父同名static方法</li>
+</ul>
+</li>
+<li><p>屬性變數</p>
+<ul>
+<li>使用父同名屬性變數</li>
+</ul>
+</li>
+</ul>
+<h1 id="列舉-enum"><a href="#列舉-enum" class="headerlink" title="列舉(enum)"></a>列舉(enum)</h1><ul>
+<li>public final static</li>
+<li>無法更改</li>
+<li>==,equals()</li>
+<li>內容值在內部排序與宣告一樣</li>
+<li>java.lang.Compareable介面</li>
+<li>內容值的資料型別等於該enum型別</li>
+</ul>
+<h1 id="Android-執行緒"><a href="#Android-執行緒" class="headerlink" title="Android 執行緒"></a>Android 執行緒</h1><p>程式優先順序(Process Priority)<br>Foreground Process &amp; Background Process</p>
+<p>執行緒排程(Thread Scheduling)</p>
+<ol>
+<li>default group - UI介面</li>
+<li>background group - 工作執行(5~10%)</li>
+</ol>
+<ul>
+<li>前景處理程序 : User目前執行的工作所需的處理程序</li>
+</ul>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://baiibbai.github.io/2020/05/27/Java%E7%AD%86%E8%A8%98/" data-id="ckap3f1wk0002l8gzbx99d0j8" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+  
+    <a href="/2020/05/27/NetLinking%E6%9E%B6%E8%A8%AD%E7%B6%B2%E7%AB%99/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">NetLinking架設網站</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+
+  
+    
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">彙整</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/05/">五月 2020</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">最新文章</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2020/05/27/Java%E7%AD%86%E8%A8%98/">Java筆記</a>
+          </li>
+        
+          <li>
+            <a href="/2020/05/27/NetLinking%E6%9E%B6%E8%A8%AD%E7%B6%B2%E7%AB%99/">NetLinking架設網站</a>
+          </li>
+        
+          <li>
+            <a href="/2020/05/27/hello-world/">Hello World</a>
+          </li>
+        
+          <li>
+            <a href="/2020/05/27/MVVM%E6%9E%B6%E6%A7%8B%E7%AF%84%E4%BE%8B/">MVVM架構範例</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2020 John Doe<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+
+  
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+
+
+<script src="/js/script.js"></script>
+
+
+
+
+  </div>
+</body>
+</html>
