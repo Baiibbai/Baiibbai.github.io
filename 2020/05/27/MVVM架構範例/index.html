@@ -7,15 +7,15 @@
   
   <title>MVVM架構範例 | Baiibbai的部落格</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="介紹 分成 Model,ViewModel,View  Model : 邏輯 ViewModel : 控制View連結Activity&#x2F;Fragment View : 在Activity&#x2F;Fragment裡，只保留單純的View    範例 EventsFragment發Request將資料更新到RecyclerView 向下拉更新資料 點擊Item開啟新頁面  DataBinding build">
+  <meta name="description" content="介紹 分成 Model,ViewModel,View  Model : 邏輯 ViewModel : 控制View連結Activity&#x2F;Fragment View : 在Activity&#x2F;Fragment裡，只保留單純的View    範例 EventsFragment發Request將資料更新到RecyclerView 向下拉更新資料 點擊Item開啟新頁面">
 <meta property="og:type" content="article">
 <meta property="og:title" content="MVVM架構範例">
 <meta property="og:url" content="https://baiibbai.github.io/2020/05/27/MVVM%E6%9E%B6%E6%A7%8B%E7%AF%84%E4%BE%8B/index.html">
 <meta property="og:site_name" content="Baiibbai的部落格">
-<meta property="og:description" content="介紹 分成 Model,ViewModel,View  Model : 邏輯 ViewModel : 控制View連結Activity&#x2F;Fragment View : 在Activity&#x2F;Fragment裡，只保留單純的View    範例 EventsFragment發Request將資料更新到RecyclerView 向下拉更新資料 點擊Item開啟新頁面  DataBinding build">
+<meta property="og:description" content="介紹 分成 Model,ViewModel,View  Model : 邏輯 ViewModel : 控制View連結Activity&#x2F;Fragment View : 在Activity&#x2F;Fragment裡，只保留單純的View    範例 EventsFragment發Request將資料更新到RecyclerView 向下拉更新資料 點擊Item開啟新頁面">
 <meta property="og:locale" content="zh_TW">
 <meta property="article:published_time" content="2020-05-27T05:51:05.000Z">
-<meta property="article:modified_time" content="2020-05-27T07:07:41.391Z">
+<meta property="article:modified_time" content="2020-05-27T08:25:53.920Z">
 <meta property="article:author" content="John Doe">
 <meta property="article:tag" content="Android">
 <meta property="article:tag" content="MVVM">
@@ -108,21 +108,18 @@
 <li>向下拉更新資料</li>
 <li>點擊Item開啟新頁面</li>
 </ul>
-<h1 id="DataBinding"><a href="#DataBinding" class="headerlink" title="DataBinding"></a>DataBinding</h1><ul>
-<li><p>build.gradle(app)</p>
-<ul>
-<li><p>Data Binding 將View跟ViewModel綁定</p>
-</li>
-<li><p>可在ViewModel做資料更改 直接設定給View</p>
-</li>
-<li><p>在build.gradle(app)啟用dataBinding</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">android&#123;</span><br><span class="line">   		comileSdkVersion <span class="number">29</span></span><br><span class="line">   		buildToolsVersion <span class="string">"29.0.0"</span></span><br><span class="line">           </span><br><span class="line">   		<span class="comment">//啟用 Data Binding</span></span><br><span class="line">     		dataBinding&#123;</span><br><span class="line">       		enabled = <span class="keyword">true</span>;</span><br><span class="line">   		&#125;</span><br><span class="line">   		...</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<a id="more"></a>
 
-</li>
+
+<h1 id="DataBinding"><a href="#DataBinding" class="headerlink" title="DataBinding"></a>DataBinding</h1><ul>
+<li>build.gradle(app)<ul>
+<li>Data Binding 將View跟ViewModel綁定</li>
+<li>可在ViewModel做資料更改 直接設定給View</li>
+<li>在build.gradle(app)啟用dataBinding</li>
 </ul>
 </li>
 </ul>
-<p>在原本的 fragment_events.xml 的最外層加上 (在 Root View 按 Alt + Enter -&gt; Convert to data binding layout)，並在 裡面宣告要跟 View 綁定的 ViewModel</p>
+<pre><code><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">android&#123;</span><br><span class="line">   		comileSdkVersion <span class="number">29</span></span><br><span class="line">   		buildToolsVersion <span class="string">"29.0.0"</span></span><br><span class="line">           </span><br><span class="line">   		<span class="comment">//啟用 Data Binding</span></span><br><span class="line">     		dataBinding&#123;</span><br><span class="line">       		enabled = <span class="keyword">true</span>;</span><br><span class="line">   		&#125;</span><br><span class="line">   		...</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></code></pre><p>在原本的 fragment_events.xml 的最外層加上 (在 Root View 按 Alt + Enter -&gt; Convert to data binding layout)，並在 裡面宣告要跟 View 綁定的 ViewModel</p>
 <h2 id="fragment-events-xml"><a href="#fragment-events-xml" class="headerlink" title="fragment_events.xml"></a>fragment_events.xml</h2><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;?xml version="1.0" encoding="utf-8"?&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">layout</span> <span class="attr">xmlns:android</span>=<span class="string">"http://schemas.android.com/apk/res/android"</span></span></span><br><span class="line"><span class="tag">      <span class="attr">xmlns:tools</span>=<span class="string">"http://schemas.android.com/tools"</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">data</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">import</span> <span class="attr">type</span>=<span class="string">"android.view.View"</span>/&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">variable</span> <span class="attr">name</span>=<span class="string">"viewModel"</span> <span class="attr">type</span>=<span class="string">"com.example.mvvmtest2.EventsViewModel"</span> /&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">data</span>&gt;</span></span><br><span class="line">	...</span><br><span class="line">  	<span class="tag">&lt;/<span class="name">layout</span>&gt;</span></span><br></pre></td></tr></table></figure>
 
 <h2 id="EventsFragment-java"><a href="#EventsFragment-java" class="headerlink" title="EventsFragment.java"></a>EventsFragment.java</h2><ul>
@@ -366,7 +363,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://baiibbai.github.io/2020/05/27/MVVM%E6%9E%B6%E6%A7%8B%E7%AF%84%E4%BE%8B/" data-id="ckap2xba9000198gzd85icrl6" class="article-share-link">Share</a>
+      <a data-url="https://baiibbai.github.io/2020/05/27/MVVM%E6%9E%B6%E6%A7%8B%E7%AF%84%E4%BE%8B/" data-id="ckap359e000013kgz5tqs0xo0" class="article-share-link">Share</a>
       
       
     </footer>
@@ -375,11 +372,15 @@
     
 <nav id="article-nav">
   
-  
-    <a href="/2020/05/27/hello-world/" id="article-nav-older" class="article-nav-link-wrap">
-      <strong class="article-nav-caption">Older</strong>
-      <div class="article-nav-title">Hello World</div>
+    <a href="/2020/05/27/hello-world/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          Hello World
+        
+      </div>
     </a>
+  
   
 </nav>
 
@@ -415,11 +416,11 @@
       <ul>
         
           <li>
-            <a href="/2020/05/27/MVVM%E6%9E%B6%E6%A7%8B%E7%AF%84%E4%BE%8B/">MVVM架構範例</a>
+            <a href="/2020/05/27/hello-world/">Hello World</a>
           </li>
         
           <li>
-            <a href="/2020/05/27/hello-world/">Hello World</a>
+            <a href="/2020/05/27/MVVM%E6%9E%B6%E6%A7%8B%E7%AF%84%E4%BE%8B/">MVVM架構範例</a>
           </li>
         
       </ul>
