@@ -4,9 +4,7 @@
         "details": [
             {
                 "appID": "4Q773FC5A5.com.gonline.O8App",
-                "paths": [
-                    "*"
-                ]
+                "paths": ["NOT/line-auth/*","*"]
             }
         ]
     }
